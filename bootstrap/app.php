@@ -1,3 +1,3 @@
 <?php
 
-return new \Blog\Application;
+return new \Blog\Http\Application;

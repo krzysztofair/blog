@@ -37,24 +37,9 @@ function cache_path($file = null)
     return CACHE_PATH . '/' . prepare($file);
 }
 
-function get($pattern, $action, $params = [])
-{
-    global $app;
-
-    return $app->make("Blog\\Router")->add("GET", $pattern, "Blog\\".$action, $params);
-}
-
-function error($type, $callback)
-{
-    global $app;
-
-    $app->error($type, $callback);
-}
-
-
 function view($file, $args = [])
 {
     global $app;
 
-    return $app->make("Blog\\View", [ $file, $args ]);
+    return $app->make("Blog\\Http\\View", [ $app, $file, $args ]);
 }

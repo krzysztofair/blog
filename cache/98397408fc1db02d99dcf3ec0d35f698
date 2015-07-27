@@ -1,0 +1,10 @@
+HELLO WORLD!
+
+<hr>
+
+<?php echo e($yaml); ?>
+
+
+<hr>
+
+<?php echo $markdown; ?>

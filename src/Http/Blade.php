@@ -1,6 +1,6 @@
 <?php
 
-namespace Blog;
+namespace Blog\Http;
 
 use Philo\Blade\Blade as BladeEngine;
 
@@ -8,13 +8,10 @@ class Blade
 {
     protected $blade;
 
-    /**
-     * @singleton
-     */
     public function __construct()
     {
         $views = views_path();
-        $cache = cache_path('views/');
+        $cache = cache_path('');
 
         $this->blade = new BladeEngine($views, $cache);
     }
