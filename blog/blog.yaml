@@ -1,2 +1,11 @@
-title: My first post
-image: default.png
+posts:
+  my-first-post:
+      title: My first post
+      image: default.png
+      intro: Hello my friends, this is my first post.
+      published: 28-07-2015 08:03
+  another-post:
+    title: Another post
+    image: another.png
+    intro: This is intro yo
+    published: 27-07-2015 10:00

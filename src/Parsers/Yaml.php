@@ -6,10 +6,8 @@ use Symfony\Component\Yaml\Yaml as YamlParser;
 
 class Yaml implements Parser
 {
-    public function parse($path)
+    public function parse($contents)
     {
-        $file = file_get_contents($path);
-
-        return YamlParser::parse((string)$file);
+        return YamlParser::parse((string)$contents);
     }
 }

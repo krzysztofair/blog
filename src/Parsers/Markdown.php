@@ -13,10 +13,8 @@ class Markdown implements Parser
         $this->parsedown = $parsedown;
     }
 
-    public function parse($path)
+    public function parse($contents)
     {
-        $file = file_get_contents($path);
-
-        return $this->parsedown->text((string)$file);
+        return $this->parsedown->text((string)$contents);
     }
 }

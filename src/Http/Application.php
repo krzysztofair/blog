@@ -28,11 +28,18 @@ class Application extends Container
     {
         require __DIR__ . '/../routes.php';
 
-        $request = Request::createFromGlobals();
+        try
+        {
+            $request = Request::createFromGlobals();
 
-        $response = $this->router->dispatch($request);
+            $response = $this->router->dispatch($request);
 
-        $response->send();
+            $response->send();
 
+        } catch(\Exception $e)
+        {
+            header("Location: " . $e->getMessage());
+            exit;
+        }
     }
 }
