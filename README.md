@@ -37,10 +37,9 @@
  
 ## Writing posts
 
- There are four steps for writing a new post.
+ There are three steps for writing a new post.
  
  1. Add new post information in **blog/blog.yaml** configuration file under posts key. See sample data you can use in this file.
- 2. Edit your views under **views** directory (they're using Blade syntax).
- 3. Add new file under **blog** directory named **slug**.md, where **slug** is the same as in **blog.yaml**.
- 4. `git add` and `git push`- and you're ready!
+ 2. Add new file under **blog** directory named **slug**.md, where **slug** is the same as in **blog.yaml**.
+ 3. `git add` and `git push`- and you're ready!
 
