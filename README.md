@@ -4,11 +4,13 @@
  
  I was looking for simple and semi-lightweight blogging system with Markdown and Yaml files only. However existing ones was overloaded with plugins and functionality. So this is what I came out with.
  
- ### 1. Requirements
- 
+ Requirements
+ -------------
+
  Get the latest PHP and composer to install dependencies.
  
- ### 2. Installation
+ Installation
+ -------------
  
  Clone this repo, cd into it and install via composer:
  
@@ -24,6 +26,7 @@
  
  Your virtual host should point to **public** directory.
  
- ### 3. Customization
+ Customization
+ -------------
  
  You can edit application views to customize the template. Put your assets into public/assets directory.
