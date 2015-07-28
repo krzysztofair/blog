@@ -10,6 +10,8 @@ class Post
 
     public $image;
 
+    public $intro;
+
     public $content;
 
     public $published;
@@ -28,10 +30,9 @@ class Post
         $contents = file_get_contents(blog_path($slug.".md"));
 
         $this->title = $info['title'];
-
         $this->published = $info['published'];
-
         $this->image = $info['image'];
+        $this->intro = $info['intro'];
 
         $this->content = $this->markdown->parse($contents);
     }
