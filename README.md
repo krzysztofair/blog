@@ -4,8 +4,8 @@
  
  I was looking for simple and semi-lightweight blogging system with Markdown and Yaml files only. However existing ones was overloaded with plugins and functionality. So this is what I came out with.
  
- Requirements
- -------------
+ ### Requirements
+ ----------------
 
  Get the latest PHP and composer to install dependencies.
  
