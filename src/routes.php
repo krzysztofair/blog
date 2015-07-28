@@ -54,9 +54,24 @@ $this->router->get('{slug}', function(\Blog\Parsers\Yaml $yaml, \Blog\Parsers\Ma
     $published = $info['published'];
     $image = $info['image'];
 
+    foreach($posts as $slug => $post)
+    {
+        $posts[$slug]['slug'] = $slug;
+    }
+
+    usort($posts, function($a, $b)
+    {
+        if ($a['published'] == $b['published']) {
+            return 0;
+        }
+
+        return ($a['published'] < $b['published']) ? 1 : -1;
+    });
+
     $post = $markdown->parse($contents);
 
     return view('post', array(
+        'posts' => $posts,
         'title' => $title,
         'published' => $published,
         'post' => $post,
