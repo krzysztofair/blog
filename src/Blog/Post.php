@@ -3,6 +3,7 @@
 namespace Blog\Blog;
 
 use Blog\Parsers\Markdown;
+use Exception;
 
 class Post
 {

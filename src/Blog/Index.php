@@ -3,6 +3,7 @@
 namespace Blog\Blog;
 
 use Blog\Parsers\Yaml;
+use Exception;
 
 class Index
 {
