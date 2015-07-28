@@ -1,12 +1,38 @@
 <?php
 
-namespace Blog;
+namespace Blog\Blog;
+
+use Blog\Parsers\Markdown;
 
 class Post
 {
-    protected $title;
+    public $title;
 
-    protected $image;
+    public $image;
 
-    protected $content;
+    public $content;
+
+    public $published;
+
+    protected $markdown;
+
+    public function __construct(Markdown $markdown)
+    {
+        $this->markdown = $markdown;
+    }
+
+    public function load($slug, $info)
+    {
+        if( ! is_readable(blog_path($slug.".md"))) throw new Exception(404);
+
+        $contents = file_get_contents(blog_path($slug.".md"));
+
+        $this->title = $info['title'];
+
+        $this->published = $info['published'];
+
+        $this->image = $info['image'];
+
+        $this->content = $this->markdown->parse($contents);
+    }
 }

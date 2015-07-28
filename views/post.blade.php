@@ -1,7 +1,7 @@
-<h1>{{ $title }}</h1>
-<h3>{{ $published }}</h3>
-<img src="images/{{ $image }}">
-{!! $post !!}
+<h1>{{ $post->title }}</h1>
+<h3>{{ $post->published }}</h3>
+<img src="images/{{ $post->image }}">
+{!! $post->content !!}
 <hr>
 <h4>Another posts</h4>
 <ul>
