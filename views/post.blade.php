@@ -1,6 +1,10 @@
-<h1>{{ $post->title }}</h1>
-<h3>{{ $post->published }}</h3>
-<img src="images/{{ $post->image }}">
+@extends('template')
+
+@section('content')
+
+<h3>{{ $post->title }} <small class="pull-right">{{ $post->published }}</small></h3>
+
+<img src="images/{{ $post->image }}" class="img-responsive">
 <br>
 {{ $post->intro }}
 <hr>
@@ -16,3 +20,5 @@
         </li>
     @endforeach
 </ul>
+
+@endsection

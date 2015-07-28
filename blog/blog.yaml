@@ -1,11 +1,6 @@
 posts:
-  my-first-post:
-      title: My first post
+  default:
+      title: Just another flat file blog
       image: default.jpeg
-      intro: Hello my friends, this is my first post.
+      intro: Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.
       published: 28-07-2015 08:03
-  another-post:
-    title: Another post
-    image: another.jpeg
-    intro: This is intro yo
-    published: 27-07-2015 10:00

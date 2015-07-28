@@ -1,15 +1,22 @@
-<h1>Posts</h1>
+@extends('template')
 
-<ul>
+@section('content')
+
+<h2>All posts</h2>
+
 @foreach($posts as $post)
-    <li>
+    <div class="col-md-12">
         <a href="{{ $post['slug'] }}">
-            {{ $post['title'] }} <small>{{ $post['published'] }}</small>
+            <h3>{{ $post['title'] }} <small>{{ $post['published'] }}</small></h3>
             <p>
-                <img src="images/{{ $post['image'] }}">
+                <img src="images/{{ $post['image'] }}" class="img-responsive">
             </p>
-            <p><small>{{ $post['intro'] }}</small></p>
         </a>
-    </li>
+        <p><small>{{ $post['intro'] }}</small></p>
+        <a href="{{ $post['slug'] }}" class="btn btn-success pull-right">
+            Read more
+        </a>
+    </div>
 @endforeach
-</ul>
+
+@endsection
