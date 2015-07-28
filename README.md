@@ -10,8 +10,14 @@
  Get the latest PHP and composer to install dependencies.
  
 ## Installation
+
+ You have two options:
  
- Clone this repo, cd into it and install via composer:
+ ```
+ composer create-project krzysztofair/blog --prefer-dist
+ ```
+ 
+ or simply clone this repo, cd into it and install via composer:
  
  ```
  composer install
@@ -28,3 +34,13 @@
 ## Customization
  
  You can edit application views to customize the template. Put your assets into public/assets directory.
+ 
+## Writing posts
+
+ There are four steps for writing a new post.
+ 
+ 1. Add new post information in **blog/blog.yaml** configuration file under posts key. See sample data you can use in this file.
+ 2. Edit your views under **views** directory (they're using Blade syntax).
+ 3. Add new file under **blog** directory named **slug**.md, where **slug** is the same as in **blog.yaml**.
+ 4. `git add` and `git push`- and you're ready!
+
